@@ -13,4 +13,27 @@ public class GewinnModel {
         this.spielerZahl = 0;
     }
 
+    public int getComputerZahl() {
+        return computerZahl;
+    }
+    public int getGesamtPunkte() {
+        return gesamtPunkte;
+    }
+    public int getRundenErgebnis() {
+        return rundenErgebnis;
+    }
+    public boolean hatGewonnen(){
+        if (this.gesamtPunkte == 100){
+            return true;
+        }
+        return false;
+    }
+    public boolean hatVerloren(){
+        if (this.gesamtPunkte < 0){
+            return true;
+        }
+        return false;
+    }
+
+
 }
