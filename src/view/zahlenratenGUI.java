@@ -14,6 +14,12 @@ public class zahlenratenGUI extends JFrame{
         setSize(500, 300);
         setLocationRelativeTo(null);
         JPanel panel = new JPanel(new BorderLayout());
+
+        JPanel topPanel = new JPanel(new GridLayout(1, 2));
+        panel.add(topPanel, BorderLayout.NORTH);
+
+
+
         add(panel);
         setVisible(true);
     }
