@@ -1,4 +1,6 @@
 package view;
+import controller.SpielController;
+
 import java.awt.*;
 import javax.swing.*;
 public class ZahlenratenGUI extends JFrame{
@@ -8,7 +10,7 @@ public class ZahlenratenGUI extends JFrame{
     private JTextField txtComputerZahl;
     private JButton btnNochEinmal;
 
-    public ZahlenratenGUI() {
+    public ZahlenratenGUI(SpielController controller) {
         setTitle("Zahlen-Gewinnspiel (v1.0)");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 300);
@@ -46,6 +48,8 @@ public class ZahlenratenGUI extends JFrame{
         txtEingabe = new JTextField();
         txtEingabe.setFont(new Font("Arial", Font.PLAIN, 20));
         txtEingabe.setHorizontalAlignment(JTextField.CENTER);
+        txtEingabe.setActionCommand("Enter");
+        txtEingabe.addActionListener(controller);
 
 
         spielerP.add(spielerLabel, BorderLayout.NORTH);
@@ -71,6 +75,8 @@ public class ZahlenratenGUI extends JFrame{
         //Bottom seite
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         btnNochEinmal = new JButton("Noch einmal!");
+        btnNochEinmal.setActionCommand("NochEinmal");
+        btnNochEinmal.addActionListener(controller);
         bottomPanel.add(btnNochEinmal);
         panel.add(bottomPanel, BorderLayout.SOUTH);
 
