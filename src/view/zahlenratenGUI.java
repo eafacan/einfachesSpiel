@@ -15,6 +15,7 @@ public class zahlenratenGUI extends JFrame{
         setLocationRelativeTo(null);
         JPanel panel = new JPanel(new BorderLayout());
 
+        //Top Panel:
         JPanel topPanel = new JPanel(new GridLayout(1, 2));
         panel.add(topPanel, BorderLayout.NORTH);
 
@@ -34,6 +35,38 @@ public class zahlenratenGUI extends JFrame{
 
         topPanel.add(rundenP);
         topPanel.add(gesamtP);
+
+        //center panel
+        JPanel centerP = new JPanel(new GridLayout(1, 2));
+
+        //Spieler seite:
+        JPanel spielerP = new JPanel(new BorderLayout());
+        JLabel spielerLabel = new JLabel("Deine Zahl:");
+
+        txtEingabe = new JTextField();
+        txtEingabe.setFont(new Font("Arial", Font.PLAIN, 20));
+        txtEingabe.setHorizontalAlignment(JTextField.CENTER);
+
+
+        spielerP.add(spielerLabel, BorderLayout.NORTH);
+        spielerP.add(txtEingabe, BorderLayout.CENTER);
+
+        //Computer seite:
+        JPanel computerP = new JPanel(new BorderLayout());
+        JLabel computerT = new JLabel("Computer:");
+        computerT.setFont(new Font("Arial", Font.BOLD, 12));
+
+        txtComputerZahl = new JTextField();
+        txtComputerZahl.setEditable(false);
+        txtComputerZahl.setFont(new Font("Arial", Font.PLAIN, 20));
+        txtComputerZahl.setHorizontalAlignment(JTextField.CENTER);
+
+        computerP.add(computerT, BorderLayout.NORTH);
+        computerP.add(txtComputerZahl, BorderLayout.CENTER);
+
+        centerP.add(spielerP);
+        centerP.add(computerP);
+        panel.add(centerP, BorderLayout.CENTER);
 
         add(panel);
         setVisible(true);
