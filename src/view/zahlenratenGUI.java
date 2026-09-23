@@ -68,7 +68,32 @@ public class zahlenratenGUI extends JFrame{
         centerP.add(computerP);
         panel.add(centerP, BorderLayout.CENTER);
 
+        //Bottom seite
+        JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        btnNochEinmal = new JButton("Noch einmal!");
+        bottomPanel.add(btnNochEinmal);
+        panel.add(bottomPanel, BorderLayout.SOUTH);
+
         add(panel);
         setVisible(true);
+    }
+    public JLabel getLblGesamtpunkte() {
+        return lblGesamtpunkte;
+    }
+
+    public JLabel getLblRundengebnis() {
+        return lblRundengebnis;
+    }
+
+    public JTextField getTxtEingabe() {
+        return txtEingabe;
+    }
+
+    public JTextField getTxtComputerZahl() {
+        return txtComputerZahl;
+    }
+
+    public JButton getBtnNochEinmal() {
+        return btnNochEinmal;
     }
 }
