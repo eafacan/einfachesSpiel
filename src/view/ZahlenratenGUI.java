@@ -25,6 +25,9 @@ public class ZahlenratenGUI extends JFrame{
         JLabel rundenT = new JLabel("Rundenergebnis:");
         lblRundengebnis = new JLabel("Tippe eine Zahl von 1 bis 9");
         lblRundengebnis.setFont(new Font("Arial", Font.BOLD, 18));
+        lblRundengebnis.setBackground(Color.WHITE);
+        lblRundengebnis.setOpaque(true);
+
         rundenP.add(rundenT, BorderLayout.NORTH);
         rundenP.add(lblRundengebnis, BorderLayout.CENTER);
 
@@ -32,6 +35,9 @@ public class ZahlenratenGUI extends JFrame{
         JLabel gesamtT = new JLabel("Gesamtpunkte:");
         lblGesamtpunkte = new JLabel("Gesamtpunkte: 30");
         lblGesamtpunkte.setFont(new Font("Arial", Font.BOLD, 18));
+        lblGesamtpunkte.setBackground(Color.WHITE);
+        lblGesamtpunkte.setOpaque(true);
+
         gesamtP.add(gesamtT, BorderLayout.NORTH);
         gesamtP.add(lblGesamtpunkte, BorderLayout.CENTER);
 
