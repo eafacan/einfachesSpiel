@@ -13,7 +13,7 @@ public class GewinnModel {
         this.spielerZahl = 0;
     }
     public void berechneComputerZahl(){
-        this.computerZahl = (int) (Math.random() * 9) + 1;
+        this.computerZahl = (int) (Math.random() * 9) + 1;  // Zufällige Zahl von 1 bis 9 erstellen
     }
     public void berechneRunde(int spielerZahl){
         this.spielerZahl = spielerZahl;
@@ -26,7 +26,7 @@ public class GewinnModel {
         }else {
             this.rundenErgebnis = -10;
         }
-        this.gesamtPunkte += this.rundenErgebnis;
+        this.gesamtPunkte += this.rundenErgebnis;   // Rundenergebnis zu den Gesamtpunkten hinzufügen
 
     }
 
