@@ -62,6 +62,7 @@ public  class SpielController implements ActionListener {
             g.getTxtEingabe().setEnabled(true);
             g.getTxtEingabe().setBackground(Color.WHITE);
             g.getLblGesamtpunkte().setBackground(Color.WHITE);
+            g.getLblRundengebnis().setBackground(Color.WHITE);
         }
     }
     public static void main(String[] args) {
