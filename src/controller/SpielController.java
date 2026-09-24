@@ -18,6 +18,7 @@ public  class SpielController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("Enter")) {
+            g.getTxtEingabe().setEnabled(false);
             String eingabe = g.getTxtEingabe().getText();
             int eingabeZahl;
             try {
@@ -35,15 +36,20 @@ public  class SpielController implements ActionListener {
             g.getTxtComputerZahl().setText("" + m.getComputerZahl());
             g.getLblRundengebnis().setText("" + m.getRundenErgebnis());
             g.getLblGesamtpunkte().setText("" + m.getGesamtPunkte());
+            g.getBtnNochEinmal().setEnabled(true);
             if(m.hatGewonnen()){
                 g.getLblRundengebnis().setText("Gewonnen");
+                g.getBtnNochEinmal().setEnabled(true);
             }else if(m.hatVerloren()){
                 g.getLblRundengebnis().setText("Verloren");
+                g.getBtnNochEinmal().setEnabled(true);
             }
         } else if (e.getActionCommand().equals("NochEinmal")) {
             g.getLblRundengebnis().setText("Gib eine Zahl von 1 bis 9");
             g.getTxtComputerZahl().setText("");
             g.getTxtEingabe().setText("");
+            g.getBtnNochEinmal().setEnabled(false);
+            g.getTxtEingabe().setEnabled(true);
             g.getTxtEingabe().setBackground(Color.WHITE);
             g.getLblGesamtpunkte().setBackground(Color.WHITE);
         }

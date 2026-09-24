@@ -83,6 +83,7 @@ public class ZahlenratenGUI extends JFrame{
         btnNochEinmal = new JButton("Noch einmal!");
         btnNochEinmal.setActionCommand("NochEinmal");
         btnNochEinmal.addActionListener(controller);
+        btnNochEinmal.setEnabled(false);
         bottomPanel.add(btnNochEinmal);
         panel.add(bottomPanel, BorderLayout.SOUTH);
 
