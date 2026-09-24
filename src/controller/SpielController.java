@@ -37,12 +37,22 @@ public  class SpielController implements ActionListener {
             g.getLblRundengebnis().setText("" + m.getRundenErgebnis());
             g.getLblGesamtpunkte().setText("" + m.getGesamtPunkte());
             g.getBtnNochEinmal().setEnabled(true);
+            if(m.getRundenErgebnis() >= 1){
+                g.getLblRundengebnis().setBackground(Color.GREEN);
+            }else if(m.getRundenErgebnis() <= -1){
+                g.getLblRundengebnis().setBackground(Color.RED);
+            }else{
+                g.getLblRundengebnis().setBackground(Color.WHITE);
+
+            }
             if(m.hatGewonnen()){
                 g.getLblRundengebnis().setText("Gewonnen");
+                g.getLblRundengebnis().setBackground(Color.GREEN);
                 g.getBtnNochEinmal().setEnabled(true);
             }else if(m.hatVerloren()){
                 g.getLblRundengebnis().setText("Verloren");
                 g.getBtnNochEinmal().setEnabled(true);
+                g.getLblRundengebnis().setBackground(Color.RED);
             }
         } else if (e.getActionCommand().equals("NochEinmal")) {
             g.getLblRundengebnis().setText("Gib eine Zahl von 1 bis 9");
